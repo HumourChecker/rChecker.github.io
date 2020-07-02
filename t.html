@@ -1,0 +1,59 @@
+<html>
+<head>
+<script >
+function check(){
+var question1 = document.quiz.question1.value;
+var question2 = document.quiz.question2.value;
+var question3 = document.quiz.question3.value;
+var question4 = document.quiz.question4.value;
+var question5 = document.quiz.question5.value;
+var humour = 0;
+    
+    if(question1 == "Funny"){
+        humour++;
+}
+    if(question2 == "Funny"){
+        humour++;
+}
+    if(question3 == "Funny"){
+        humour++;
+}
+    if(question5 == "Funny"){
+        humour++;
+    }
+document.getElementById("submit").style.visibility = "visible";
+    if(humour < 1){
+        document.getElementById("number_correct").innerHTML = "you have a good humour.";
+}
+    else if(humour>1){
+        document.getElementById("number_correct").innerHTML = "you have a bad humour.";
+}
+}</script>
+<link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+<h1>Humour checker</h1>
+<form id="quiz" name="quiz">
+
+<h1>1.Why did the chicken cross the road?</br>Answer:Because he wanted to go to the other side.</h1>
+<input type="radio" id="mc" name="question1" value="Funny">Funny<br>
+<input type="radio" id="mc" name="question1" value="Not Funny">Not Funny<br>
+<h1>2.A spanish magician said uno dos and then he vanished with no trace.</h1>
+<input type="radio" id="mc" name="question2" value="Funny">Funny<br>
+<input type="radio" id="mc" name="question2" value="Not Funny">Not Funny<br>
+<h1>3.if i had to describe my self in one word it would be bad at following rules.</h1>
+<input type="radio" id="mc" name="question3" value="Funny">Funny<br>
+<input type="radio" id="mc" name="question3" value="Not Funny">Not Funny<br>
+<h1>4.You</h1>
+<input type="radio" id="mc" name="question4" value="Funny">Funny<br>
+<input type="radio" id="mc" name="question4" value="Not Funny">Not Funny<br>
+<h1>5.What did the cow say when he lost his son?</br>Answer:Moo Moo</h1>
+<input type="radio" id="mc" name="question5" value="Funny">Funny<br>
+<input type="radio" id="mc" name="question5" value="Not Funny">Not Funny<br>
+<a href="#submit"><input id="button" type="button" value="End test" onclick="check();"></a>
+</form>
+<div id="submit">
+<H1 id = "number_correct"></H1>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+body{
+background: #2d3436;
+}
+#header{
+text-align: right;
+}
+button
+{
+border: 1px solid #ff7675;
+background: none;
+padding: 10px 20px;
+border-radius: 5%;
+color: white;
+cursor: pointer;
+Margin: 10px;
+position: relative;
+overflow: hidden;
+transition: 0.8s;
+}
+button
+{
+color:#ff7675;
+}
+button:hover{
+color:#2d3436;
+}
+button::before
+{
+content: "";
+position: absolute;
+left:0;
+width: 100%;
+height:0%;
+Background:#ff7675;
+z-index: -1;
+transition: 0.8s; 
+}
+button::before{
+top: 0;
+}
+button:hover::before{
+height:180%;
+}
+section{
+text-align: center;
+margin: 160px;
+color:#ff7675;
+}
+header{
+font-size:50px;
+}
+footer{
+text-align: center;
+margin: 370px;
+color:#ff7675;
+}
